@@ -1,0 +1,25 @@
+Rabbitmq:
+  acesso: http://localhost:15672
+  username: guest
+  password: guest
+  queue name: orders
+  binding:
+    from exchange: amq.direct
+
+Grafana:
+  acesso: http://localhost:3000
+  username: admin
+  password: admin
+  dashboards:
+    url: https://grafana.com/grafana/dashboards/
+    dashboard name: RabbitMQ-Overview
+  next?:
+    - create a prometheus data
+    - import dashboard id on Dashboards + Import
+
+GO:
+  - go run cmd/consumer/main.go
+  - go run cmd/producer/main.go
+
+Docker:
+  - docker-compose up -d
