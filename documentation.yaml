@@ -2,7 +2,7 @@ Docker:
   - docker-compose up -d
 
 Rabbitmq:
-  acesso: http://localhost:15672
+  url: http://localhost:15672
   username: guest
   password: guest
   queue name: orders
@@ -10,7 +10,7 @@ Rabbitmq:
     from exchange: amq.direct
 
 Grafana:
-  acesso: http://localhost:3000
+  url: http://localhost:3000
   username: admin
   password: admin
   dashboards:
